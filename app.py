@@ -21,7 +21,7 @@ def save_submissions(submissions):
 
 @app.route('/test')
 def test_page():
-    with open('/home/ubuntu/email_template.html', 'r') as f:
+    with open('email_template.html', 'r') as f:
         email_html = f.read()
     return email_html
 
@@ -35,7 +35,7 @@ def index():
     balance = sum(1 for s in submissions if s.get('equity_priority') == 'balance')
     
     # Load email template
-    with open('/home/ubuntu/email_template.html', 'r') as f:
+    with open('email_template.html', 'r') as f:
         email_html = f.read()
     
     return f"""<!DOCTYPE html>
